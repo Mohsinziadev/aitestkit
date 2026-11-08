@@ -1,6 +1,6 @@
 {
   "name": "m2aitestkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Provider-independent regression testing for AI application outputs: structured-output checks, committed recordings, baseline diffs.",
   "type": "module",
   "license": "MIT",
@@ -75,10 +75,10 @@
   "author": "Mohsin Zia",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mohsinziadev/m2aitestkit.git"
+    "url": "git+https://github.com/Mohsinziadev/aitestkit.git"
   },
   "bugs": {
-    "url": "https://github.com/Mohsinziadev/m2aitestkit/issues"
+    "url": "https://github.com/Mohsinziadev/aitestkit/issues"
   },
   "homepage": "https://www.m2toolkit.com/npm-packages/m2aitestkit"
 }
