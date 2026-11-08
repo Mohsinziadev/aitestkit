@@ -1,0 +1,2 @@
+- run: npm ci
+- run: npx m2aitestkit run . --format junit --output m2aitestkit.xml

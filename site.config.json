@@ -1,0 +1,21 @@
+{
+  "slug": "m2aitestkit",
+  "url": "https://www.m2toolkit.com/npm-packages/m2aitestkit",
+  "siteName": "M2Toolkit",
+  "ogImage": "https://www.m2toolkit.com/opengraph-image",
+  "accent": "#c2255c",
+  "title": "m2aitestkit",
+  "tagline": "Offline regression tests for AI outputs: committed recordings, honest pass, fail and unevaluable outcomes, and assertion-level baseline diffs.",
+  "runtimePlatform": "Node.js",
+  "highlights": [
+    "Three outcomes: a check that could not run is unevaluable, never a silent pass",
+    "Redacted, commit-friendly recordings that replay offline with no API key",
+    "Assertion-level baseline diff: pass to fail is a regression, removed checks are listed",
+    "Provider-independent, zero runtime dependencies, exit codes for CI"
+  ],
+  "build": {
+    "root": "demo",
+    "viteConfig": "demo/vite.config.ts",
+    "serverEntry": "demo/entry-server.tsx"
+  }
+}

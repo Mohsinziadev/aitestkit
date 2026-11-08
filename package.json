@@ -1,0 +1,84 @@
+{
+  "name": "m2aitestkit",
+  "version": "0.1.0",
+  "description": "Provider-independent regression testing for AI application outputs: structured-output checks, committed recordings, baseline diffs.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "llm",
+    "testing",
+    "evals",
+    "regression",
+    "structured-output",
+    "json-schema",
+    "ci",
+    "ai",
+    "prompt-testing",
+    "replay",
+    "baseline"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "m2aitestkit": "dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "test": "npm run build && node --test --test-reporter=spec \"tests/*.test.ts\"",
+    "prepublishOnly": "npm run typecheck && npm test",
+    "dev:site": "vite --config demo/vite.config.ts",
+    "build:site": "node scripts/build-site.mjs",
+    "typecheck:site": "tsc --noEmit -p demo/tsconfig.json"
+  },
+  "peerDependencies": {
+    "ajv": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ajv": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "ajv": "^8.20.0",
+    "marked": "^18.1.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "shiki": "^4.5.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "zod": "^4.6.7"
+  },
+  "author": "Mohsin Zia",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohsinziadev/m2aitestkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mohsinziadev/m2aitestkit/issues"
+  },
+  "homepage": "https://www.m2toolkit.com/npm-packages/m2aitestkit"
+}

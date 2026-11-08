@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>m2aitestkit: offline regression tests for AI outputs</title>
+    <meta
+      name="description"
+      content="Record a known-good AI output once, commit it, and fail CI on assertion-level regressions. Offline, provider-independent, with pass, fail and unevaluable outcomes."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%23c2255c%27/%3E%3Cpath d=%27M9 17l5 5 10-12%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272.4%27 stroke-linecap=%27round%27/%3E%3C/svg%3E"
+    />
+    <script>
+      // A visitor's own choice (the theme toggle) wins. The default is the light theme.
+      try {
+        var choice = localStorage.getItem("m2aitestkit-site:theme");
+        document.documentElement.dataset.theme = choice === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+      // The page is prerendered as the landing page; hide it until a docs deep link renders.
+      document.documentElement.dataset.view =
+        location.hash.indexOf("#/docs") === 0 ? "docs" : "home";
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>

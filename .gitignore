@@ -1,0 +1,6 @@
+node_modules
+dist
+*.tgz
+site-dist
+.m2aitestkit
+.DS_Store

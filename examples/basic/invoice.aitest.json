@@ -1,0 +1,17 @@
+{
+  "name": "invoice-extractor",
+  "cases": [
+    {
+      "id": "simple-invoice",
+      "input": "Invoice #1001 from Initech, total $120.50",
+      "output": "{\"invoiceNumber\":\"1001\",\"vendor\":\"Initech\",\"total\":120.5}",
+      "metadata": { "model": "any-model", "prompt": "extract-v2" },
+      "assertions": [
+        { "type": "is-json" },
+        { "type": "schema", "schema": { "type": "object", "required": ["invoiceNumber", "vendor", "total"], "properties": { "total": { "type": "number", "minimum": 0 } } } },
+        { "type": "field-type", "field": "total", "is": "number" },
+        { "type": "forbid", "rules": { "no-markdown": { "pattern": "\\*\\*" } } }
+      ]
+    }
+  ]
+}

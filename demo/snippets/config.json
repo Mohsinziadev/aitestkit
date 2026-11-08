@@ -1,0 +1,9 @@
+{
+  "name": "invoice-extractor",
+  "cases": [{
+    "id": "simple-invoice",
+    "input": "Invoice #1001 from Initech, total $120.50",
+    "output": "{\"invoiceNumber\":\"1001\",\"total\":120.5}",
+    "assertions": [{ "type": "is-json" }, { "type": "required-fields", "fields": ["invoiceNumber", "total"] }]
+  }]
+}
